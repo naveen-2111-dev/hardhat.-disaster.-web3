@@ -1,0 +1,34 @@
+{
+  "name": "DisasterManagement",
+  "version": "1.0.0",
+  "description": "Web 3.0 project",
+  "main": "DisasterManagement.js",
+  "author": "Naveen Rajan M",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-chai-matchers": "^2.0.0",
+    "@nomicfoundation/hardhat-ethers": "^3.0.0",
+    "@nomicfoundation/hardhat-ignition": "^0.15.0",
+    "@nomicfoundation/hardhat-ignition-ethers": "^0.15.0",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.0",
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@nomicfoundation/hardhat-verify": "^2.0.0",
+    "@typechain/ethers-v6": "^0.5.0",
+    "@typechain/hardhat": "^9.0.0",
+    "chai": "^4.2.0",
+    "ethers": "^6.4.0",
+    "hardhat": "^2.22.4",
+    "hardhat-gas-reporter": "^1.0.8",
+    "solidity-coverage": "^0.8.0",
+    "typechain": "^8.3.0"
+  },
+  "scripts": {
+    "compile": "npx hardhat compile",
+    "deploy": "npx hardhat ignition deploy ./ignition/modules/DisasterManagement.js",
+    "nodes": "npx hardhat node",
+    "network": "npx hardhat ignition deploy ./ignition/modules/DisasterManagement.js --network fantomtest"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  }
+}
