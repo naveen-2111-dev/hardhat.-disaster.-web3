@@ -1,10 +1,11 @@
-# disaster management
+# disaster management 🪵
 #### hardhat deployed smartcontract
 
 ## tech Stack:
 - 🟨 Solidity
 - 🔨 Hardhat
 - ⚛️ React
+- 🥉 ethers.js<br/><br/>![ethers](https://img.shields.io/badge/ethers-v6.12.1-green)
 
 **1.** git clone
 ```git clone
@@ -26,6 +27,7 @@ npm run dev
 ```
 
 ## hardhat
+![hardhat](https://img.shields.io/badge/hardhat-v2.22.4-blue)
 ``` hardhat
 "scripts": {
     1. "compile": "npx hardhat compile", 
