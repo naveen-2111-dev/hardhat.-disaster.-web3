@@ -14,7 +14,7 @@ useEffect(() => {
     try {
       if (window.ethereum) {
         await window.ethereum.request({ method: "eth_requestAccounts" });
-        const newProvider = new ethers.providers.Web3Provider(window.ethereum);
+        const newProvider = new ethers.BrowserProvider(window.ethereum);//BrowserProvider for version 6........
         setProvider(newProvider);
         const signer = newProvider.getSigner();
         const newContract = new ethers.Contract(contractAddress, Abi.abi, signer);
