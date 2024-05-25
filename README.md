@@ -2,9 +2,9 @@
 #### hardhat deployed smartcontract
 
 ## tech Stack:
-- solidity 
-- hardhat
-- react
+- 🟨 Solidity
+- 🔨 Hardhat
+- ⚛️ React
 
 **1.** git clone
 ```git clone
@@ -28,12 +28,18 @@ npm run dev
 ## hardhat
 ``` hardhat
 "scripts": {
-    "compile": "npx hardhat compile", //to compile the contract
-    "deploy": "npx hardhat ignition deploy ./ignition/modules/DisasterManagement.js", //deployes the contract locally
-    "nodes": "npx hardhat node", //local networks
-    "network": "npx hardhat ignition deploy ./ignition/modules/DisasterManagement.js --network `fantomtest`" //deployes to the network
+    1. "compile": "npx hardhat compile", 
+    2. "deploy": "npx hardhat ignition deploy ./ignition/modules/DisasterManagement.js", 
+    3. "nodes": "npx hardhat node", 
+    4. "network": "npx hardhat ignition deploy ./ignition/modules/DisasterManagement.js --network `fantomtest`" 
   },
 ```
+- 🛠️ Compile[1]
+- 🚀 Deploy[2]
+- 🖥️ Local Networks[3]
+- 🌐 Network Deployment[4]
 
-`fantomtest`: change the name to what every network where you want to deploy
-`FTM`: fanthom testnet symbol.
+`fantomtest`: change the name to what every network where you want to deploy<br/>
+`FTM`: fanthom testnet symbol.<br/>
+
+![](https://user-images.githubusercontent.com/176499/96893278-ebc67580-1460-11eb-9530-d5df3a3d65d0.png) 
