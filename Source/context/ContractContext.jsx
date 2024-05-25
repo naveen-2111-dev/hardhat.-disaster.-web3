@@ -10,7 +10,7 @@ export const ContractContextProvider = ({ children }) => {
   const contractAddress = "0x181e4131d6A897C8CB6f8E33C38a3dCCC818FDf2";
 
 useEffect(() => {
-  const providerInitialization = async () => {
+  const Connect = async () => {
     try {
       if (window.ethereum) {
         await window.ethereum.request({ method: "eth_requestAccounts" });
@@ -26,9 +26,8 @@ useEffect(() => {
       console.error("Error initializing provider or contract:", err);
     }
   };
-  providerInitialization();
+  Connect();
 }, []);
-
 
   const values = { provider, contract };
 
