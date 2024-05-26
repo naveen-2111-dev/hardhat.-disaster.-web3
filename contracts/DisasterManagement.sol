@@ -58,4 +58,16 @@ contract DisasterManagements {
         TotVolCount++;
         require(TotVolCount <= volunteer.VolunteersCount, "alredy vols joined/...");
     }
+
+    function DisasterReturner() public view returns (Disaster[] memory){
+        Disaster[] memory AllDisasters = new Disaster[](postCount);
+
+        for(uint i=0 ; i < postCount ; i++) {
+            Disaster storage DisastersAll = disasters[i];
+
+            AllDisasters[i] = DisastersAll;
+        }
+
+        return AllDisasters;
+    }
 }
