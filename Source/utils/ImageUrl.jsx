@@ -1,14 +1,11 @@
-const IsImageUrl = ({Url}) => {
+const IsImageUrl = ({ Url }) => {
     try {
         const UrlObj = new URL(Url);
-        if (UrlObj) {
-            return "ok";
-        } else {
-            return "Failed";
-        }
+        return "ok";
     } catch (error) {
-        console.log("error",error);
+        console.error("Error validating URL:", error);
+        return "Failed";
     }
 }
 
-export default IsImageUrl
+export default IsImageUrl;
