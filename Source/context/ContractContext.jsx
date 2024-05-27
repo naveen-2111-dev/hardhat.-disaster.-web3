@@ -14,7 +14,8 @@ export const ContractContextProvider = ({ children }) => {
             console.log("No MetaMask or any wallet found");
         }
     }, []);
-
+  //connecting to metamask wallet 
+  
     const Connect = async () => {
         try {
             if (window.ethereum) {
@@ -30,7 +31,10 @@ export const ContractContextProvider = ({ children }) => {
             console.error("Error initializing provider or contract:", err);
         }
     };
-
+  //string memory _image, string memory _cause, string memory _location,
+  // uint256 _volCount, string memory _description, 
+  //string memory _data, uint256 _amount [params]
+  
     const FundRaiser = async ({ Image, Cause, Location, Volunteer, Description, Date, AmountRequired }) => {
         try {
             if (newContract) {
@@ -52,7 +56,7 @@ export const ContractContextProvider = ({ children }) => {
             console.log(error);
         }
     };
-
+    //passing id as params
   const Funder = async({_id, Amount}) => {
     try {
       const FundingPerson = newContract.Fundder(_id, {
@@ -96,7 +100,7 @@ export const ContractContextProvider = ({ children }) => {
     GetDisasters,
     Funder,
     VolunteeringForDisaster
-  };
+  }; //exporting to frontend code
 
     return (
         <ContractContext.Provider value={values}>
