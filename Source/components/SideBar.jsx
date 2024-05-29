@@ -5,10 +5,7 @@ const SideBar = () => {
   return (
     <div className='bg-blue-200 w-80 shadow-xl rounded-2xl h-screen'>
       <div className='flex flex-col items-center gap-3 h-full'>
-        <div className='mt-10 flex flex-col items-center'>
-          <span>profile</span>
-        </div>
-        <div className='flex flex-col gap-3 mt-5 w-64'>
+        <div className='flex flex-col gap-3 mt-10 w-64'>
           <button className='p-3 bg-blue-300 hover:bg-blue-400 rounded-xl font-serif capitalize shadow-xl hover:border border-blue-500 hover:text-white'>
             <FaMoneyCheckAlt className='inline-block mr-2' /> raise Fund
           </button>
@@ -24,6 +21,9 @@ const SideBar = () => {
           <button className='p-3 rounded-xl font-serif capitalize'>
             <FaCog className='inline-block mr-2' /> settings
           </button>
+          <div className='mt-5 flex flex-col items-center'>
+          <span>profile</span>
+        </div>
         </div>
       </div>
     </div>
