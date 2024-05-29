@@ -6,7 +6,7 @@ import Volunteer from "../pages/Volunteer";
 
 const App = () => {
   return (
-    <div>
+    <div className='bg-blue-100'>
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
