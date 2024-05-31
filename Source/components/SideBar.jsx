@@ -1,13 +1,28 @@
 import React, { useState } from 'react';
 import { FaMoneyCheckAlt, FaHandHoldingHeart, FaHandsHelping, FaCog, FaChevronRight, FaChevronLeft } from 'react-icons/fa';
 import {MdMenu} from "react-icons/md"
+import { useNavigate } from 'react-router-dom';
 
 const SideBar = () => {
 
+  const navigate = useNavigate();
   const [side, setSide] = useState(false);
 
   const HandleSideBarOpen = () => {
     setSide(!side);
+  }
+
+  const Navigate = (choice) => {
+    const navigator = "";
+    switch (choice) {
+      case 'raise':
+        navigator = "/Fundraiser";
+      case 'donate':
+        navigator = "/Donate";
+      case 'volunteer':
+        navigator = "/Volunteer";
+    }
+    navigate(navigator);
   }
 
   return (

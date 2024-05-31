@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from '../pages/Home';
 import Profile from "../pages/Profile";
 import Volunteer from "../pages/Volunteer";
+import FundRaiser from '../pages/FundRaiser';
+import Donate from '../pages/Donate';
 
 const App = () => {
   return (
@@ -12,6 +14,8 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/profile" element={<Profile />} />
           <Route path='/Volunteer' element={<Volunteer/>}/>
+          <Route path='/Fundraiser' element={<FundRaiser />} />
+          <Route path='/Donate' element={<Donate/>}/>
         </Routes>
       </Router>
     </div>
