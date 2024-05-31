@@ -8,7 +8,7 @@ import Donate from '../pages/Donate';
 
 const App = () => {
   return (
-    <div className='bg-blue-100'>
+    <div>
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
