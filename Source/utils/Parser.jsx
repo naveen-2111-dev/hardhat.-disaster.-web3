@@ -1,9 +1,9 @@
-import { ethers } from 'ethers';
+import { ethers, parseEther } from 'ethers';
 
 export const parseAmountToWEI = (amount) => {
     try {
-        const parsedAmountInWEI = ethers.utils.parseEther(amount.toString());
-        console.log("Successfully converted:", parsedAmountInWEI.toString());
+        const parsedAmountInWEI = parseEther(amount);
+        console.log("Successfully converted:", parsedAmountInWEI);
         return parsedAmountInWEI;
     } catch (err) {
         console.error("Error converting amount to WEI:", err);

@@ -38,9 +38,11 @@ export const ContractContextProvider = ({ children }) => {
   //string memory _data, uint256 _amount [params]
   
     const FundRaiser = async ({ Image, Cause, Location, Volunteer, Description, Date, AmountRequired }) => {
-        try {
-            if (newContract) {
-                const amountInWei = parseAmountToWEI(AmountRequired);
+    try {
+        if (newContract) {
+            if (typeof AmountRequired === 'string' && AmountRequired.trim() !== '') {
+                const stringamt = parseAmountToWEI(AmountRequired);
+              console.log(stringamt);
                 const DisasterFunding = await newContract.DemandFund(
                     Image,
                     Cause,
@@ -48,16 +50,20 @@ export const ContractContextProvider = ({ children }) => {
                     Volunteer,
                     Description,
                     JSON.stringify(Date),
-                    amountInWei
+                    stringamt
                 );
                 console.log(DisasterFunding);
             } else {
-                console.log("Contract not initialized");
+                console.log("Invalid AmountRequired. Please provide a valid string value.");
             }
-        } catch (error) {
-            console.log(error);
+        } else {
+            console.log("Contract not initialized");
         }
-    };
+    } catch (error) {
+        console.log(error);
+    }
+};
+
     //passing id as params
   const Funder = async({_id, Amount}) => {
     try {
