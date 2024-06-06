@@ -30,16 +30,16 @@ const SideBar = () => {
       {
         side ? (
       
-          <div className='flex justify-center items-center bg-blue-200 shadow-xl rounded-2xl h-screen'>
+          <div className='flex justify-center items-center m-2 bg-blue-200 shadow-xl rounded-2xl h-screen'>
             <div className='flex flex-col items-center gap-3 h-full'>
               <div className='flex flex-col gap-3 mt-10 w-64 m-5'>
-                <button className='p-3 bg-blue-300 hover:bg-blue-400 rounded-xl font-serif capitalize shadow-xl hover:border border-blue-500 hover:text-white'>
+                <button className='p-3 bg-blue-500 hover:bg-blue-700 rounded-xl text-white font-bold   capitalize shadow-xl hover:border border-blue-500 hover:text-white'>
                   <FaMoneyCheckAlt className='inline-block mr-2 ' /> raise Fund
                 </button>
-                <button className='p-3 bg-blue-300 hover:bg-blue-400 rounded-xl font-serif capitalize shadow-xl hover:border border-blue-500 hover:text-white'>
+                <button className='p-3 bg-blue-500 hover:bg-blue-700 rounded-xl text-white font-bold   capitalize shadow-xl hover:border border-blue-500 hover:text-white'>
                   <FaHandHoldingHeart className='inline-block mr-2' /> donate
                 </button>
-                <button className='p-3 bg-blue-300 hover:bg-blue-400 rounded-xl font-serif capitalize shadow-xl hover:border border-blue-500 hover:text-white'>
+                <button className='p-3 bg-blue-500 hover:bg-blue-700 rounded-xl text-white font-bold   capitalize shadow-xl hover:border border-blue-500 hover:text-white'>
                   <FaHandsHelping className='inline-block mr-2' /> volunteer
                 </button>
               </div>
