@@ -6,9 +6,10 @@ const Connect = () => {
 
   const { openConnect, word, Connect } = useContract();
 
-  const ConnectToWallet = () => {
+  const ConnectToWallet = async() => {
     try {
-      Connect();
+      await Connect();
+      alert("connected")
     } catch (err) {
       console.log(`error in connecting ${err}`)
     }

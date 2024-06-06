@@ -1,10 +1,10 @@
-const IsImageUrl = ({ Url }) => {
+const IsImageUrl = ( Url ) => {
     try {
         const UrlObj = new URL(Url);
-        return "ok";
+        return true;
     } catch (error) {
         console.error("Error validating URL:", error);
-        return "Failed";
+        return false;
     }
 }
 
