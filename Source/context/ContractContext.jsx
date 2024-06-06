@@ -8,6 +8,7 @@ const ContractContext = createContext();
 export const ContractContextProvider = ({ children }) => {
     const [newContract, setNewContract] = useState(null);
     const [openConnect, setOpenConnect] = useState(false);
+    const [word, setWord] = useState("");
     const contractAddress = "0x3b25490589B345bd327124BeF14D0A87Be70715E";
 
     useEffect(() => {
@@ -102,7 +103,9 @@ export const ContractContextProvider = ({ children }) => {
     Funder,
     VolunteeringForDisaster,
     openConnect,
-    setOpenConnect
+    setOpenConnect,
+    word,
+    setWord
   }; //exporting to frontend code
 
     return (
